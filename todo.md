@@ -77,23 +77,26 @@
 
 ## TERMINAL SYNTAX
 #### POST (the -f goes through the form picks up data then creates new Puppy)
+
 ```
 http -f POST localhost:3000/api/v1/puppies/ puppyName=John puppyAge=3
 ```
 
 #### PUT (Edit/ Update)
+
 ```
 http PUT localhost:3000/api/v1/puppy/2 puppyName=crystal puppyAge=1
 ```
 
 #### DELETE (remove from array and view from json)
+
 ```
 http DELETE localhost:3000/api/v1/puppy/3
 ```
 
-
 # EXAMPLES BELOW
 ### POST in the apiRoutes.js
+
 ```
 router.post('/puppies', function(req, res, next) {
   var newPostPuppy = new Puppy(
@@ -108,7 +111,9 @@ router.post('/puppies', function(req, res, next) {
 
 module.exports = router;
 ```
+
 ## POST in the terminal
+
 ```
   ➜  express_puppies git:(master) ✗ http -f POST localhost:3000/api/v1/puppies puppyID=4 puppyName=Taco puppyAge=7
 
@@ -131,6 +136,7 @@ X-Powered-By: Express
 ```
 
 ## PUT in the apiRoutes.js
+
 ```
 router.put('/puppy/:id', function(req, res, next) {
   var id = +req.params.id;
@@ -145,7 +151,9 @@ router.put('/puppy/:id', function(req, res, next) {
   }
 });
 ```
+
 ## PUT in the terminal
+
 ```
 ➜  express_puppies git:(master) ✗ http PUT localhost:3000/api/v1/puppy/2 puppyName=crystal puppyAge=1 puppyId=7
 
@@ -175,14 +183,18 @@ X-Powered-By: Express
     }
 ]
 ```
+
 ## DELETE in the apiRoutes.js
+
 ```
 router.delete('/puppy/:id', function(req, res, next) {
  tempPuppyArray.splice(req.params.id - 1, 1);
  res.json(tempPuppyArray)
 });
 ```
+
 ## DELETE in the terminal
+
 ```
 ➜  express_puppies git:(master) ✗ http DELETE localhost:3000/api/v1/puppy/3
 
