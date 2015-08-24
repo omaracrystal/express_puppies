@@ -31,13 +31,13 @@
 1. Test
 
 
-STEPS
-//apps.js
+## STEPS
+#apps.js
 1. open app.js create new route
 1. open app.js create new main route
    app.use('/api/v1', puppyAPIRoutes)
 
-//apiRoutes.js
+#apiRoutes.js
 1. test out in new apiRoutes.js file
   router.get('/puppies', function(req, res, next) {
   console.log(newPuppy);
@@ -45,13 +45,13 @@ STEPS
 });
 1. create global variables
 
-//models folder
+#models folder
 1. create models folder within server folder
    (have whatever we need to create a new instance of our resourse)
 1. create new file puppies.js within models folder
 1. create constuctor then export it as Puppy
 
-//apiRoutes.js
+#apiRoutes.js
 1. add some complexity to the POST request to "if statement"
 1. create PUT request in apiRoutes.js
 1. Set up JSON with GET
@@ -65,7 +65,7 @@ STEPS
 1. add DELETE route
 1. then clean up! make code dry since we repeated several things in each route
 
-NOTES:
+#NOTES:
 1. in the PUT (edit/update) (we never change the ID but we could change the name and age or other key values)
 
 TERMINAL:
@@ -74,17 +74,17 @@ TERMINAL:
 1. What do we do with this data?
 
 ////////////////////////TERMINAL SYNTAX///////////////////////////////////
-POST (the -f goes through the form picks up data then creates new Puppy)
+#POST (the -f goes through the form picks up data then creates new Puppy)
 1. http -f POST localhost:3000/api/v1/puppies/ puppyName=John puppyAge=3
 
-PUT (Edit/ Update)
+#PUT (Edit/ Update)
 1. http PUT localhost:3000/api/v1/puppy/2 puppyName=crystal puppyAge=1
 
-DELETE (remove from array and view from json)
+#DELETE (remove from array and view from json)
 1. http DELETE localhost:3000/api/v1/puppy/3
 
 
-EXAMPLES BELOW
+##EXAMPLES BELOW
 
 ////////////////////////in the apiRoutes.js POST///////////////////////////////////
 router.post('/puppies', function(req, res, next) {
