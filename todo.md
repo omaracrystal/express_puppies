@@ -55,13 +55,15 @@
 1. Add some complexity to the POST request to "if statement"
 1. Create PUT request in apiRoutes.js
 1. Set up JSON with GET
-      ```
+
+```
   router.get('/puppies', function(req, res, next) {
       // console.log(newPuppy);
       // res.send("yo")
       res.json(tempPuppyArray);
   });
-      ```
+```
+
 1. Create POST request with httpie
 1. Within the PUT router update the if statement
 1. Add DELETE route
